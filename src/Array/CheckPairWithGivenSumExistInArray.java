@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class CheckPairWithGivenSumExistInArray {
 
+	//T.C : O(n) and S.C:O(n)
 	public static boolean pairExists(int arr[], int n, int sum) {
 		ArrayList<Integer> al = new ArrayList<>();
 		for (int i = 0; i < n; i++) {

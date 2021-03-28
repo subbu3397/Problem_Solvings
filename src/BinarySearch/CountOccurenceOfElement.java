@@ -2,9 +2,12 @@ package BinarySearch;
 
 public class CountOccurenceOfElement {
 
+	//T.C : O(log n) and S.C:O(1)
 	public static int occurenceOfElement(int arr[], int ele) {
 
 		int firstOccurence = firstOccurenceOfElement(arr, ele);
+		if(firstOccurence == -1)
+			return firstOccurence;
 		int lastOccurence = lastOccurenceOfElement(arr, ele);
 		return lastOccurence-firstOccurence+1;
 	}
@@ -23,7 +26,7 @@ public class CountOccurenceOfElement {
 				start = mid+1;
 			}
 		}
-		return 0;
+		return -1;
 	}
 	
 	public static int lastOccurenceOfElement(int arr[], int ele) {
@@ -40,12 +43,12 @@ public class CountOccurenceOfElement {
 				start = mid+1;
 			}
 		}
-		return 0;
+		return -1;
 	}
 
 	public static void main(String[] args) {
 		int arr[] = { 1, 2, 2, 2, 4, 4, 5, 6, 6 };
-		int ele = 2;
+		int ele = 3;
 		System.out.println(occurenceOfElement(arr, ele));
 	}
 
